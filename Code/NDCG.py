@@ -5,8 +5,8 @@ from collections import defaultdict
 import numpy as np
 from scipy.stats import rankdata
 
-# outcorrelation = open("/Users/leila/PhD/Clarifying Question/Mimics-Dou//Correlation/RandomRankerLong.txt", "w")
-outndcg = open("/Users/leila/PhD/Clarifying Question/Mimics-Dou/LTR_Models(5-fold)/Aspects-Und+No-Offline/SVMNDCG.txt", "w")
+# outcorrelation = open("./RandomRankerLong.txt", "w")
+outndcg = open("./SVMNDCG.txt", "w")
 
 for en in range (1):
     LenMyFileP = 0
@@ -24,12 +24,12 @@ for en in range (1):
     ndcgmanual1=0
 
     for j in range(5):
-        LRank_file = open("/Users/leila/PhD/Clarifying Question/Mimics-Dou/LTR_Models(5-fold)/Aspects-Und+No-Offline/LTRmyScoreFileSVM"+str(j+1)+".txt")
+        LRank_file = open("./LTRmyScoreFileSVM"+str(j+1)+".txt")
         read_Score_file = csv.reader(LRank_file, delimiter="\t")
-        Mimics = open("/Users/leila/PhD/Clarifying Question/Mimics-Dou/HighestEngagementLevel(MIMICS-Dou).txt")
+        Mimics = open("./HighestEngagementLevel(MIMICS-Dou).txt")
         read_Mimics=csv.reader(Mimics, delimiter="\t")
-        out = open("/Users/leila/PhD/Clarifying Question/Mimics-Dou/RankOfflineRankingMedHigh3.txt", "w")
-        out1 = open("/Users/leila/PhD/Clarifying Question/Mimics-Dou/RankEngagementMedHigh.txt", "w")
+        out = open("./RankOfflineRankingMedHigh3.txt", "w")
+        out1 = open("./RankEngagementMedHigh.txt", "w")
 
         Dict_QueryClarq= defaultdict(list)
         Dict_Main=defaultdict(list)
